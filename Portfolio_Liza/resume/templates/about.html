@@ -1,0 +1,78 @@
+{% extends "base.html" %} {%load static %} {% block blockcontent %}
+<div class="container-fluid">
+  <div id="about" class="row about-section">
+    <div class="col-lg-4 about-card">
+      <h3 class="font-weight-light">Who am I ?</h3>
+      <span class="line mb-5"></span>
+      <h5 class="mb-3">
+        A {{my_expertise.1.job_title}} / {{my_expertise.0.job_title}}
+      </h5>
+      <p class="mt-20">{{Who_am_I.0.summary_text}}</p>
+      <button class="btn btn-outline-danger">
+        <i class="icon-down-circled2"></i>Download My CV
+      </button>
+    </div>
+    <div class="col-lg-4 about-card">
+      <h3 class="font-weight-light">Personal Info</h3>
+      <span class="line mb-5"></span>
+      <ul class="mt40 info list-unstyled">
+        <li><span>Birthdate</span> : {{personal_info.0.birth_date}}</li>
+        <li><span>Email</span> : {{personal_info.0.email}}</li>
+        <li><span>Phone</span> : {{personal_info.0.phone}}</li>
+        <li><span>Address</span> :{{personal_info.0.address}}</li>
+      </ul>
+      <ul class="social-icons pt-3">
+        <li class="social-item">
+          <a target="_blank" class="social-link" href="{{social.0.link}}"
+            ><i class="ti-facebook" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="social-item">
+          <a target="_blank" class="social-link" href="{{social.1.link}}"
+            ><i class="ti-instagram" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="social-item">
+          <a target="_blank" class="social-link" href="{{social.2.link}}"
+            ><i class="ti-github" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-4 about-card">
+      <h3 class="font-weight-light">My Expertise</h3>
+      <span class="line mb-5"></span>
+      <div class="row">
+        <div class="col-1 text-danger pt-1">
+          <i class="ti-widget icon-lg"></i>
+        </div>
+        <div class="col-10 ml-auto mr-3">
+          <h6>{{my_expertise.0.job_title}}</h6>
+          <p class="subtitle">{{my_expertise.0.job_company}}</p>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 text-danger pt-1">
+          <i class="ti-paint-bucket icon-lg"></i>
+        </div>
+        <div class="col-10 ml-auto mr-3">
+          <h6>{{my_expertise.1.job_title}}</h6>
+          <p class="subtitle">{{my_expertise.1.job_company}}</p>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 text-danger pt-1">
+          <i class="ti-stats-up icon-lg"></i>
+        </div>
+        <div class="col-10 ml-auto mr-3">
+          <h6>{{my_expertise.2.job_title}}</h6>
+          <p class="subtitle">{{my_expertise.2.job_company}}</p>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
